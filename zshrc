@@ -1,6 +1,20 @@
+#	  ___________   _____   ______ _____ _    _ _____   _____
+#	 |___  /  __ \ / ____| |___  // ____| |  | |  __ \ / ____|
+#		/ /| |  | | (___      / /| (___ | |__| | |__) | |
+#	   / / | |  | |\___ \    / /  \___ \|  __  |  _  /| |
+#	  / /__| |__| |____) |  / /__ ____) | |  | | | \ \| |____
+#	 /_____|_____/|_____/  /_____|_____/|_|  |_|_|  \_\\_____|
+#
+#
+# This is my zshrc. Many thanks to aliceriot for helping me set it up.
+# Her zshrc can be found here: https://github.com/aliceriot/dotfiles/blob/master/zsh/zshrc.zsh
+#
+#
+#
 # Path to your oh-my-zsh installation.
   export ZSH=/home/zak/.oh-my-zsh
   export TERM="xterm-256color"
+  export EDITOR="nvim"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
