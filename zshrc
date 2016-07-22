@@ -14,6 +14,8 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/zak/.oh-my-zsh
   export TERM="xterm-256color"
+#
+# Set nvim as default editor
   export EDITOR="nvim"
 
 # Set name of the theme to load.
