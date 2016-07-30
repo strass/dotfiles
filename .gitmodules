@@ -1,0 +1,9 @@
+[submodule "electro7-dotfiles"]
+	path = electro7-dotfiles
+	url = https://github.com/electro7/dotfiles.git
+[submodule "nerd-fonts"]
+	path = nerd-fonts
+	url = https://github.com/ryanoasis/nerd-fonts.git
+[submodule "awesome-terminal-fonts"]
+	path = awesome-terminal-fonts
+	url = https://github.com/gabrielelana/awesome-terminal-fonts.git

@@ -33,6 +33,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "*****************************************************************************
 "" NeoBundle install packages
 "*****************************************************************************
+NeoBundle 'ryanoasis/vim-devicons'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'jistr/vim-nerdtree-tabs.git'
 NeoBundle 'tpope/vim-commentary'
@@ -77,7 +78,6 @@ NeoBundle 'honza/vim-snippets'
 
 "" Color
 NeoBundle 'altercation/vim-colors-solarized'
-
 "" Vim-Bootstrap Updater by sherzberg
 NeoBundle 'avelino/vim-bootstrap-updater'
 
@@ -188,7 +188,7 @@ set guioptions=egmrti
 
 if has("gui_running")
 	if has("gui_mac") || has("gui_macvim")
-		set guifont=Menlo:h12
+		set guifont=Roboto\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 		set transparency=7
 	endif
 else
@@ -228,6 +228,7 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
+let g:airline_powerline_fonts = 1
 
 "*****************************************************************************
 "" Abbreviations
