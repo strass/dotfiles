@@ -3,3 +3,34 @@ keychain ~/.ssh/id_ecdsa
 [ -f ~/.keychain/$HOSTNAME-sh ] && . ~/.keychain/$HOSTNAME-sh 2>/dev/null
 [ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null
 export SSH_ASKPASS=ssh-askpass
+
+
+# #background image and compton
+feh --bg-scale /home/alice/Pictures/tarsands.jpg &
+compton -c --no-fading-openclose &
+
+###### AUDIO #####
+pulseaudio &
+# [ ! -s ~/.config/mpd/pid ] && mpd
+#start mpdas (scrobbler)
+# [[ -z $(pgrep -xU $UID mpdas) ]] && mpdas &
+
+##### INPUT #####
+#trackpoint config for thinkpad
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" 0.75
+#touchpad config (tap and stuff)
+synclient TapButton1=1
+synclient HorizTwoFingerScroll=1
+synclient PalmDetect=1
+
+##### START i3 #####
+exec i3
+
+
+##### NOTES #####
+# redshift is f.lux
+# parcellite

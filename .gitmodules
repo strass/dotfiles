@@ -7,3 +7,9 @@
 [submodule "awesome-terminal-fonts"]
 	path = awesome-terminal-fonts
 	url = https://github.com/gabrielelana/awesome-terminal-fonts.git
+[submodule "i3/i3-gaps"]
+	path = i3/i3-gaps
+	url = https://github.com/Airblader/i3.git
+[submodule "imgur-screenshot"]
+	path = imgur-screenshot
+	url = https://github.com/jomo/imgur-screenshot.git

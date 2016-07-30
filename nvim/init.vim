@@ -83,6 +83,7 @@ NeoBundle 'avelino/vim-bootstrap-updater'
 
 "" Custom bundles
 NeoBundle "tpope/vim-surround"
+NeoBundle "hinz/vim-startify"
 "" Python Bundle
 NeoBundle "davidhalter/jedi-vim"
 
@@ -229,6 +230,8 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
 
 "*****************************************************************************
 "" Abbreviations
