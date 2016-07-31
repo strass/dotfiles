@@ -120,3 +120,5 @@ export LANG=en_US.UTF-8
 #
 # Keychain setup
 eval $(keychain --eval --quiet ~/.ssh/id_rsa)
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

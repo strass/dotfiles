@@ -1,12 +1,14 @@
-#deal with keychain (ssh key thing)
+##### KEYCHAIN / SSH #####
 keychain ~/.ssh/id_ecdsa
 [ -f ~/.keychain/$HOSTNAME-sh ] && . ~/.keychain/$HOSTNAME-sh 2>/dev/null
 [ -f ~/.keychain/$HOSTNAME-sh-gpg ] && . ~/.keychain/$HOSTNAME-sh-gpg 2>/dev/null
 export SSH_ASKPASS=ssh-askpass
 
+##### X #####
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-# #background image and compton
-feh --bg-scale /home/alice/Pictures/tarsands.jpg &
+##### VISUAL #####
+feh --randomize --bg-scale ~/Pictures/wallpaper/* &
 compton -c --no-fading-openclose &
 
 ###### AUDIO #####
