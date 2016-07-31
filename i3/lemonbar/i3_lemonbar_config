@@ -1,15 +1,39 @@
-#!\bin\bash
-# i3 panel config. Powerline style.
+#!/bin/bash
+
+## i3 panel config. Powerline style.
+## Based on Electro7's work
+## Modded by demure
 
 panel_fifo="/tmp/i3_lemonbar_${USER}"
 geometry="x14"
-## This needs a fork of lemonbar.
-#font="Terminess Powerline-8"
-font="-xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1"
-#iconfont="fontawesome-10"
-iconfont="-xos4-terminesspowerline-medium-r-normal--12-120-72-72-c-60-iso10646-1"
-res_w=$(xrandr | grep "current" | awk '{print $8a}')
-thinkpad_battery="1"		# If set to "1", ignore conky battery and use Thinkpad Multi Battery. "0" for conky battery.
+res_w=$(xrandr | awk '/current/ {print $8a}')
+
+## Will limit the char length of music, adjust down for smaller screens.
+music_limit=70
+
+## This format needs a fork of lemonbar, which supports xft fonts.
+## The font should have powerline support, if you want the fancy separators.
+font="PragmataProMono-10"
+
+## I recommend font awesome for the iconfont, it has the best icon support
+## I have even of any symbol font. It also has the most symbols.
+iconfont="fontawesome-10"
+
+## This is for the Screenshot IP Scrubber
+## You could set this to "" to reduce bar length while toggled.
+scrub_ip="---.---.---.---"
+
+### Temperature ### {{{
+## Temperature value can either be C or F.
+temp_format="F"
+if [ ${temp_format} = "C" ]; then
+	temp_format=""
+  else
+	if [ ${temp_format} = "F" ]; then
+		temp_format="f"
+	fi
+fi
+### End Temperature ### }}}
 
 ### Alarm Settings ### {{{
 cpu_alert=75                        # % cpu use
@@ -28,10 +52,11 @@ bat_alert_high=29
 upd_vol=3                           # Volume update
 upd_bri=3                           # Screen brightness update
 upd_mail=120                        # Mail check update
-upd_cpb=5                           # control-pianobar song update
+upd_mmpd=5                          # Multi Music Player Display
 upd_ext_ip=600                      # External IP update
 upd_gpg=300                         # GPG update
 upd_tmb=60                          # Thinkpad Multi Battery update
+upd_temp=3                          # Temperature update
 ### End Update ### }}}
 
 ### Color ### {{{
@@ -55,6 +80,7 @@ color_bat_plug="#ff859900"          # Forground for 70-100 battery icon
 color_temp="#ffdc322f"              # Backgroud for high temp
 
 	### Solarized ### {{{
+	## For reference purposes
 	#$base03:    #002b36;
 	#$base02:    #073642;
 	#$base01:    #586e75;
@@ -81,6 +107,7 @@ color_temp="#ffdc322f"              # Backgroud for high temp
 #else
   #stab=''
 #fi
+
 ## I like to be compact...
 stab=''
 ### End Spacing ### }}}
@@ -124,5 +151,4 @@ icon_ext_ip=""                     # External IP
 icon_gpg=""                        # GPG icon
 icon_gpg_locked=""                 # GPG locked icon
 icon_gpg_unlocked=""               # GPG unlocked icon
-##                                 
 ### End Icons ### }}}
