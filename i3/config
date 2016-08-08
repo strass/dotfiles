@@ -207,6 +207,6 @@ gaps outer 0
 bar {
         #status_command i3status
         tray_output primary
-        position top
+        position bottom
         i3bar_command ~/.i3/lemonbar/i3_lemonbar.sh
 }

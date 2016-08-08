@@ -83,9 +83,9 @@ NeoBundle 'avelino/vim-bootstrap-updater'
 
 "" Custom bundles
 NeoBundle "tpope/vim-surround"
-NeoBundle "hinz/vim-startify"
 "" Python Bundle
 NeoBundle "davidhalter/jedi-vim"
+NeoBundle "klen/python-mode"
 
 "" Javascript Bundle
 NeoBundle 'jelera/vim-javascript-syntax'
