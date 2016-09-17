@@ -122,3 +122,8 @@ export LANG=en_US.UTF-8
 eval $(keychain --eval --quiet ~/.ssh/id_rsa)
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# py-env setup
+export PATH="/home/strass/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
