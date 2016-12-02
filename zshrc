@@ -121,4 +121,13 @@ export LANG=en_US.UTF-8
 # Keychain setup
 eval $(keychain --eval --quiet ~/.ssh/id_rsa)
 
+# RVM
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# PyEnv
+export PATH="/home/strass/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export NVM_DIR="/home/strass/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
