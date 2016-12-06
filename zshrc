@@ -122,7 +122,7 @@ export LANG=en_US.UTF-8
 eval $(keychain --eval --quiet ~/.ssh/id_rsa)
 
 # RVM
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # PyEnv
 # py-env setup
@@ -145,3 +145,5 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
