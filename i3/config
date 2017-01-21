@@ -20,6 +20,9 @@ set $transparent #00000000
 # desktop background
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 
+# polybar
+exec --no-startup-id polybar top
+
 font pango:Inconsolata Awesome Medium 11
 popup_during_fullscreen smart
 
